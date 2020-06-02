@@ -5,8 +5,7 @@ let aliasEmail = (email: string): string => {
   );
 
   if (!emailRegex.test(email)) {
-    console.log(`Looks like ${email} is an invalid email! exiting...`);
-    Deno.exit();
+    throw new Error(`${email} is an invalid email address`);
   }
 
   let [start, end] = email.split("@");

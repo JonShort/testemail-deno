@@ -1,4 +1,4 @@
-let aliasEmail = (email: string): string => {
+export let aliasEmail = (email: string): string => {
   // validate email
   let emailRegex = new RegExp(
     "^([A-Za-z0-9!#$%&'*+/=?^_`{|}~.-])+@([A-Za-z0-9-])+([.]([A-Za-z0-9-]+))+[A-Za-z]$",

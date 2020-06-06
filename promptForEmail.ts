@@ -1,4 +1,4 @@
-let promptForEmail = async (): Promise<string> => {
+export let promptForEmail = async () => {
   // Arbitrary 128 max size - could increase if required
   let resBuf = new Uint8Array(128);
   let Decoder = new TextDecoder();
@@ -10,19 +10,14 @@ let promptForEmail = async (): Promise<string> => {
   try {
     await Deno.read(Deno.stdin.rid, resBuf);
   } catch (err) {
-    console.log("Error occurred! Exiting...", err);
-    Deno.exit();
+    throw new Error("Error occurred in stdin read");
   }
 
   // Decode input - strip newlines, null characters, and spaces
   let email = Decoder.decode(resBuf).replace(/\r?\n|\r|\0| /g, "");
-
   if (email.length === 0) {
-    console.log("No email provided, exiting...");
-    Deno.exit();
+    throw new Error("No email provided");
   }
 
   return email;
 };
-
-export default promptForEmail;

@@ -60,8 +60,6 @@ Deno.test("main - should exit with error if executed with invalid email from std
 
   let status = await p.status();
 
-  console.log(status);
-
   assertEquals(status?.success, false);
 
   Deno.close(p.rid);

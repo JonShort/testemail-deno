@@ -1,5 +1,7 @@
 # Testemail - 🦕 Deno edition
 
+![CI Tests](https://github.com/JonShort/testemail-deno/workflows/CI%20Tests/badge.svg)
+
 Provide an email, receive a version aliased with UTC epoch time
 
 e.g.

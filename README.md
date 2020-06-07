@@ -20,3 +20,11 @@ _With email as arg_
 ```bash
 deno run ./testemail.ts "example@example.com"
 ```
+
+## Running unit tests
+
+_Run entire test suite_
+
+```bash
+deno test --allow-run --allow-write=./tests --allow-read=./tests ./tests
+```

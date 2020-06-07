@@ -1,12 +1,11 @@
-let aliasEmail = (email: string): string => {
+export let aliasEmail = (email: string): string => {
   // validate email
   let emailRegex = new RegExp(
     "^([A-Za-z0-9!#$%&'*+/=?^_`{|}~.-])+@([A-Za-z0-9-])+([.]([A-Za-z0-9-]+))+[A-Za-z]$",
   );
 
   if (!emailRegex.test(email)) {
-    console.log(`Looks like ${email} is an invalid email! exiting...`);
-    Deno.exit();
+    throw new Error(`${email} is an invalid email address`);
   }
 
   let [start, end] = email.split("@");

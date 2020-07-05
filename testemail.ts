@@ -1,5 +1,5 @@
-import { aliasEmail } from "./aliasEmail.ts";
-import { promptForEmail } from "./promptForEmail.ts";
+import { aliasEmail } from "./src/aliasEmail.ts";
+import { promptForEmail } from "./src/promptForEmail.ts";
 
 export let main = async () => {
   // grab email from args, prompt user if not provided

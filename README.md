@@ -25,8 +25,12 @@ deno run ./testemail.ts "example@example.com"
 
 ## Running unit tests
 
-_Run entire test suite_
+_Run entire test suite (shell script)_
+```bash
+sh test.sh
+```
 
+_Run entire test suite (manually)_
 ```bash
 deno test --allow-run --allow-write=./tests --allow-read=./tests ./tests
 ```

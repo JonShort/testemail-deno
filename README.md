@@ -27,7 +27,7 @@ deno run ./testemail.ts "example@example.com"
 
 _Run entire test suite (shell script)_
 ```bash
-sh test.sh
+sh run-tests.sh
 ```
 
 _Run entire test suite (manually)_
